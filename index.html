@@ -14,25 +14,58 @@
     <div class="phone-frame">
       <div class="app">
         <!-- Status Bar -->
-        <image src="/components/status-bar.png" class="status-bar" />
-        </div>
+        <img src="/components/status-bar.png" class="status-bar" alt="status bar" />
 
         <!-- Header -->
         <header class="header">
           <div class="header-text">
             <h1>Roll Your <span class="italic">Whiskery</span></h1>
-            <p class="subtitle">Let the dice decide your next moment. Please roll the dice.</p>
+            <p class="subtitle">Find your perfect game with a single roll.</p>
           </div>
           <div class="header-icons">
-            <image src="/components/search-icon.png" class="icon" />
-            <image src="/components/dots-icon.png" class="icon" />
+            <img src="/components/search-icon.png" class="icon" alt="search" />
+            <img src="/components/dots-icon.png" class="icon" alt="menu" />
           </div>
         </header>
 
+        <!-- Step 1: Player Count Selection -->
+        <section class="filter-section">
+          <p class="filter-label">How many players?</p>
+          <div class="player-buttons">
+            <button class="player-btn active" data-players="1" onclick="selectPlayers(1)">1</button>
+            <button class="player-btn" data-players="2" onclick="selectPlayers(2)">2</button>
+            <button class="player-btn" data-players="3" onclick="selectPlayers(3)">3</button>
+            <button class="player-btn" data-players="4" onclick="selectPlayers(4)">4</button>
+            <button class="player-btn" data-players="5" onclick="selectPlayers(5)">5+</button>
+          </div>
+        </section>
+
+        <!-- Step 2: Duration Selection -->
+        <section class="filter-section">
+          <p class="filter-label">How much time?</p>
+          <div class="duration-buttons">
+            <button class="duration-btn active" data-duration="quick" onclick="selectDuration('quick')">
+              <span class="duration-icon">⚡</span>
+              <span class="duration-label">Quick</span>
+              <span class="duration-sub">~30min</span>
+            </button>
+            <button class="duration-btn" data-duration="medium" onclick="selectDuration('medium')">
+              <span class="duration-icon">⏳</span>
+              <span class="duration-label">Medium</span>
+              <span class="duration-sub">~60min</span>
+            </button>
+            <button class="duration-btn" data-duration="long" onclick="selectDuration('long')">
+              <span class="duration-icon">🕰️</span>
+              <span class="duration-label">Long</span>
+              <span class="duration-sub">90min+</span>
+            </button>
+          </div>
+        </section>
+
         <!-- Dice Section -->
         <section class="dice-section">
-          <image src="/components/whiskery-name-sticker.png" class="sticker sticker-tl" />
-          <image src="/components/dice-sticker.png" class="sticker sticker-tr" />
+          <img src="/components/whiskery-name-sticker.png" class="sticker sticker-tl" alt="" />
+          <img src="/components/dice-sticker.png" class="sticker sticker-tr" alt="" />
 
           <div class="dice-container" onclick="rollDice()">
             <div class="dice" id="dice">
@@ -40,59 +73,47 @@
             </div>
           </div>
 
-          <image src="/components/still-warm-yellowline.png" class="sticker sticker-br" />
-            <image src="/components/still-warm-redfill.png" class="sticker sticker-bl" />
+          <img src="/components/still-warm-redfill.png" class="sticker sticker-bl" alt="" />
+          <img src="/components/still-warm-yellowline.png" class="sticker sticker-br" alt="" />
         </section>
 
-        <!-- Featured Card -->
+        <!-- Roll Instruction -->
+        <p class="roll-instruction" id="rollInstruction">Tap the dice to find your game</p>
+
+        <!-- Featured Result Card -->
         <div class="featured-card">
           <div class="featured-text">
-            <p class="featured-label">Today's Roll</p>
-            <h3 class="featured-title" id="resultTitle">Tap to Begin</h3>
+            <p class="featured-label">Today's Pick</p>
+            <h3 class="featured-title" id="resultTitle">Awaiting Your Roll</h3>
           </div>
           <span class="arrow">→</span>
         </div>
 
-        <!-- Tagline -->
-        <p class="tagline">
-          The Intersection Of Warmth, Wonder, And Shared Moments.
-        </p>
-
-        <!-- Result Cards -->
-        <div class="results-grid">
-          <div class="result-card">
-            <h4 class="card-title">Your Tea</h4>
-            <p class="card-description" id="teaResult">
-              Roll the dice to discover your perfect tea.
-            </p>
-            <p class="card-meta">
-              From: <span id="teaSource">Jeju Island</span>
-            </p>
+        <!-- Game Details Section -->
+        <div class="game-details" id="gameDetails">
+          <div class="detail-row">
+            <span class="detail-label">Players</span>
+            <span class="detail-value" id="gamePlayers">—</span>
           </div>
-          <div class="result-card">
-            <h4 class="card-title yellow">
-              Your Pastry <span class="badge">popular</span>
-            </h4>
-            <p class="card-description" id="pastryResult">
-              A handcrafted treat awaits.
-            </p>
-            <p class="card-meta">Baked: <span id="pastryTime">Daily</span></p>
+          <div class="detail-row">
+            <span class="detail-label">Time</span>
+            <span class="detail-value" id="gameTime">—</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Difficulty</span>
+            <span class="detail-value" id="gameDifficulty">—</span>
+          </div>
+          <div class="detail-row">
+            <span class="detail-label">Vibe</span>
+            <span class="detail-value yellow" id="gameVibe">—</span>
           </div>
         </div>
 
-        <div class="results-grid">
-          <div class="result-card">
-            <h4 class="card-title yellow">Your Game</h4>
-            <p class="card-description" id="gameResult">
-              Choose your adventure with a roll.
-            </p>
-          </div>
-          <div class="result-card">
-            <h4 class="card-title yellow">Your Vibe</h4>
-            <p class="card-description" id="vibeResult">
-              Each roll unlocks a unique mood.
-            </p>
-          </div>
+        <!-- Game Description -->
+        <div class="game-description-card">
+          <p class="game-description" id="gameDescription">
+            Select your preferences above, then roll the dice to discover the perfect game for your Whiskery moment.
+          </p>
         </div>
 
         <!-- Bottom Navigation -->
