@@ -1,3 +1,20 @@
+/* ===== Custom Fonts ===== */
+@font-face {
+  font-family: "Apple Garamond";
+  src: url("/fonts/AppleGaramond.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Apple Garamond";
+  src: url("fonts/AppleGaramond-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +23,7 @@
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background: #626263;
+  background: #434346;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -45,10 +62,10 @@ body {
 }
 
 .header h1 {
-  font-family: "Apple", serif;
+  font-family: "Apple Garamond", serif;
   font-size: 28px;
   font-weight: 400;
-  color: #1a1a1a;
+  color: #212020;
   line-height: 1.2;
   letter-spacing: -0.5px;
 }
@@ -59,20 +76,20 @@ body {
 
 .subtitle {
   font-size: 13px;
-  color: #888;
+  color: #434346;
   margin-top: 5px;
   font-weight: 300;
 }
 
 .header-icons {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: center;
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 
@@ -83,7 +100,7 @@ body {
 
 .filter-label {
   font-size: 13px;
-  color: #888;
+  color: #434346;
   margin-bottom: 10px;
   font-weight: 400;
 }
@@ -101,7 +118,7 @@ body {
   border: 1.5px solid #e0e0e0;
   background: white;
   border-radius: 12px;
-  font-family: "Playfair Display", serif;
+  font-family: "Segoe UI", serif;
   font-size: 18px;
   font-weight: 400;
   color: #555;
@@ -116,7 +133,7 @@ body {
 .player-btn.active {
   background: #f6e27b;
   border-color: #d4b948;
-  color: #1a1a1a;
+  color: #212020;
   font-weight: 600;
 }
 
@@ -158,19 +175,21 @@ body {
 .duration-label {
   font-size: 13px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: #212020;
 }
 
 .duration-sub {
   font-size: 10px;
-  color: #888;
+  color: #434346;
 }
 
 /* Dice Section */
 .dice-section {
   position: relative;
   height: 240px;
-  background: #886d6d;
+  background-image: url("/components/background-white-cups.png");
+  background-size: cover;
+  background-position: center;
   margin: 15px 20px;
   border-radius: 20px;
   display: flex;
@@ -192,7 +211,7 @@ body {
 .dice {
   width: 120px;
   height: 120px;
-  background: linear-gradient(135deg, #e8d26a 0%, #d4b948 100%);
+  background: linear-gradient(135deg, #e8d26a 0%, #F6E27B 100%);
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -326,7 +345,7 @@ body {
 }
 
 .detail-value.yellow {
-  color: #d4b948;
+  color: #F6E27B;
   font-style: italic;
 }
 
@@ -336,7 +355,7 @@ body {
   padding: 15px 18px;
   background: #faf9f5;
   border-radius: 15px;
-  border-left: 3px solid #d4b948;
+  border-left: 3px solid #F6E27B;
 }
 
 .game-description {

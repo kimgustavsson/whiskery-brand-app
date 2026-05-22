@@ -14,7 +14,11 @@
     <div class="phone-frame">
       <div class="app">
         <!-- Status Bar -->
-        <img src="/components/status-bar.png" class="status-bar" alt="status bar" />
+        <img
+          src="/components/status-bar.png"
+          class="status-bar"
+          alt="status bar"
+        />
 
         <!-- Header -->
         <header class="header">
@@ -32,11 +36,41 @@
         <section class="filter-section">
           <p class="filter-label">How many players?</p>
           <div class="player-buttons">
-            <button class="player-btn active" data-players="1" onclick="selectPlayers(1)">1</button>
-            <button class="player-btn" data-players="2" onclick="selectPlayers(2)">2</button>
-            <button class="player-btn" data-players="3" onclick="selectPlayers(3)">3</button>
-            <button class="player-btn" data-players="4" onclick="selectPlayers(4)">4</button>
-            <button class="player-btn" data-players="5" onclick="selectPlayers(5)">5+</button>
+            <button
+              class="player-btn active"
+              data-players="1"
+              onclick="selectPlayers(1)"
+            >
+              1
+            </button>
+            <button
+              class="player-btn"
+              data-players="2"
+              onclick="selectPlayers(2)"
+            >
+              2
+            </button>
+            <button
+              class="player-btn"
+              data-players="3"
+              onclick="selectPlayers(3)"
+            >
+              3
+            </button>
+            <button
+              class="player-btn"
+              data-players="4"
+              onclick="selectPlayers(4)"
+            >
+              4
+            </button>
+            <button
+              class="player-btn"
+              data-players="5"
+              onclick="selectPlayers(5)"
+            >
+              5+
+            </button>
           </div>
         </section>
 
@@ -44,17 +78,29 @@
         <section class="filter-section">
           <p class="filter-label">How much time?</p>
           <div class="duration-buttons">
-            <button class="duration-btn active" data-duration="quick" onclick="selectDuration('quick')">
+            <button
+              class="duration-btn active"
+              data-duration="quick"
+              onclick="selectDuration('quick')"
+            >
               <span class="duration-icon">⚡</span>
               <span class="duration-label">Quick</span>
               <span class="duration-sub">~30min</span>
             </button>
-            <button class="duration-btn" data-duration="medium" onclick="selectDuration('medium')">
+            <button
+              class="duration-btn"
+              data-duration="medium"
+              onclick="selectDuration('medium')"
+            >
               <span class="duration-icon">⏳</span>
               <span class="duration-label">Medium</span>
               <span class="duration-sub">~60min</span>
             </button>
-            <button class="duration-btn" data-duration="long" onclick="selectDuration('long')">
+            <button
+              class="duration-btn"
+              data-duration="long"
+              onclick="selectDuration('long')"
+            >
               <span class="duration-icon">🕰️</span>
               <span class="duration-label">Long</span>
               <span class="duration-sub">90min+</span>
@@ -64,8 +110,16 @@
 
         <!-- Dice Section -->
         <section class="dice-section">
-          <img src="/components/whiskery-name-sticker.png" class="sticker sticker-tl" alt="" />
-          <img src="/components/dice-sticker.png" class="sticker sticker-tr" alt="" />
+          <img
+            src="/components/whiskery-name-sticker.png"
+            class="sticker sticker-tl"
+            alt=""
+          />
+          <img
+            src="/components/dice-sticker.png"
+            class="sticker sticker-tr"
+            alt=""
+          />
 
           <div class="dice-container" onclick="rollDice()">
             <div class="dice" id="dice">
@@ -73,12 +127,22 @@
             </div>
           </div>
 
-          <img src="/components/still-warm-redfill.png" class="sticker sticker-bl" alt="" />
-          <img src="/components/still-warm-yellowline.png" class="sticker sticker-br" alt="" />
+          <img
+            src="/components/still-warm-redfill.png"
+            class="sticker sticker-bl"
+            alt=""
+          />
+          <img
+            src="/components/still-warm-yellowline.png"
+            class="sticker sticker-br"
+            alt=""
+          />
         </section>
 
         <!-- Roll Instruction -->
-        <p class="roll-instruction" id="rollInstruction">Tap the dice to find your game</p>
+        <p class="roll-instruction" id="rollInstruction">
+          Tap the dice to find your game
+        </p>
 
         <!-- Featured Result Card -->
         <div class="featured-card">
@@ -112,21 +176,11 @@
         <!-- Game Description -->
         <div class="game-description-card">
           <p class="game-description" id="gameDescription">
-            Select your preferences above, then roll the dice to discover the perfect game for your Whiskery moment.
+            Select your preferences above, then roll the dice to discover the
+            perfect game for your Whiskery moment.
           </p>
         </div>
-
-        <!-- Bottom Navigation -->
-        <nav class="bottom-nav">
-          <span class="nav-icon">🏠</span>
-          <span class="nav-icon">❤️</span>
-          <span class="nav-icon">🛒</span>
-          <span class="nav-icon">🔍</span>
-          <span class="nav-icon">👤</span>
-        </nav>
-      </div>
-    </div>
-
+        
     <script src="script.js"></script>
   </body>
 </html>
