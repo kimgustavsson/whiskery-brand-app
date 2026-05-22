@@ -44,7 +44,7 @@ body {
 .app {
   padding: 0;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 }
 
 /* Status Bar */
@@ -58,12 +58,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  padding: 20px 25px 15px;
+  padding: 12px 22px 8px;
 }
 
 .header h1 {
   font-family: "Apple Garamond", serif;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: 400;
   color: #212020;
   line-height: 1.2;
@@ -75,7 +75,7 @@ body {
 }
 
 .subtitle {
-  font-size: 13px;
+  font-size: 12px;
   color: #434346;
   margin-top: 5px;
   font-weight: 300;
@@ -88,38 +88,38 @@ body {
 }
 
 .icon {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
 }
 
 /* Filter Sections */
 .filter-section {
-  padding: 10px 25px 5px;
+  padding: 5px 22px 3px;
 }
 
 .filter-label {
-  font-size: 13px;
+  font-size: 12px;
   color: #434346;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   font-weight: 400;
 }
 
 /* Player Buttons */
 .player-buttons {
   display: flex;
-  gap: 8px;
-  margin-bottom: 5px;
+  gap: 6px;
+  margin-bottom: 3px;
 }
 
 .player-btn {
   flex: 1;
-  padding: 12px 0;
-  border: 1.5px solid #e0e0e0;
+  padding: 6px 0;
+  border: 1.5px solid #e0dac8;
   background: white;
-  border-radius: 12px;
+  border-radius: 10px;
   font-family: "Segoe UI", serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #555;
   cursor: pointer;
@@ -140,22 +140,22 @@ body {
 /* Duration Buttons */
 .duration-buttons {
   display: flex;
-  gap: 8px;
-  margin-bottom: 10px;
+  gap: 6px;
+  margin-bottom: 5px;
 }
 
 .duration-btn {
   flex: 1;
-  padding: 12px 8px;
-  border: 1.5px solid #e0e0e0;
+  padding: 8px 6px;
+  border: 1.5px solid #e0dac8;
   background: white;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 1px;
 }
 
 .duration-btn:hover {
@@ -168,30 +168,30 @@ body {
 }
 
 .duration-icon {
-  font-size: 16px;
-  margin-bottom: 2px;
+  font-size: 14px;
+  margin-bottom: 1px;
 }
 
 .duration-label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
   color: #212020;
 }
 
 .duration-sub {
-  font-size: 10px;
+  font-size: 9px;
   color: #434346;
 }
 
 /* Dice Section */
 .dice-section {
   position: relative;
-  height: 240px;
+  height: 250px;
   background-image: url("/components/background-white-cups.png");
   background-size: cover;
   background-position: center;
-  margin: 15px 20px;
-  border-radius: 20px;
+  margin: 8px 20px;
+  border-radius: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -209,15 +209,15 @@ body {
 }
 
 .dice {
-  width: 120px;
+  width: 150px;
   height: 120px;
-  background: linear-gradient(135deg, #e8d26a 0%, #F6E27B 100%);
-  border-radius: 20px;
+  background: linear-gradient(135deg, #e8d26a 0%, #f6e27b 100%);
+  border-radius: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 60px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  font-size: 48px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s;
 }
 
@@ -246,49 +246,49 @@ body {
 }
 
 .sticker-tl {
-  top: 30px;
-  left: 10px;
-  width: 110px;
+  top: 18px;
+  left: 8px;
+  width: 100px;
   transform: rotate(-15deg);
 }
 
 .sticker-tr {
-  top: 20px;
-  right: 15px;
-  width: 65px;
+  top: 12px;
+  right: 12px;
+  width: 60px;
   transform: rotate(20deg);
 }
 
 .sticker-bl {
-  bottom: 25px;
-  left: 30px;
-  width: 85px;
+  bottom: 16px;
+  left: 22px;
+  width: 80px;
   transform: rotate(10deg);
 }
 
 .sticker-br {
-  bottom: 30px;
-  right: 25px;
-  width: 85px;
+  bottom: 20px;
+  right: 18px;
+  width: 100px;
   transform: rotate(-15deg);
 }
 
 /* Roll Instruction */
 .roll-instruction {
   text-align: center;
-  font-size: 12px;
+  font-size: 11px;
   color: #999;
-  margin: 0 0 12px 0;
+  margin: 0 0 8px 0;
   font-style: italic;
 }
 
 /* Featured Card */
 .featured-card {
   background: white;
-  border: 1px solid #e0e0e0;
-  margin: 0 20px 15px;
-  padding: 18px 20px;
-  border-radius: 15px;
+  border: 1px solid #e0dac8;
+  margin: 0 18px 8px;
+  padding: 12px 16px;
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -296,13 +296,13 @@ body {
 }
 
 .featured-label {
-  font-size: 12px;
+  font-size: 11px;
   color: #999;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .featured-title {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
   color: #d4b948;
   letter-spacing: 0.5px;
@@ -310,20 +310,20 @@ body {
 }
 
 .arrow {
-  font-size: 20px;
+  font-size: 18px;
   color: #555;
 }
 
 /* Game Details */
 .game-details {
-  padding: 0 25px 15px;
+  padding: 0 22px 8px;
 }
 
 .detail-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 6px 0;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -332,58 +332,37 @@ body {
 }
 
 .detail-label {
-  font-size: 13px;
+  font-size: 12px;
   color: #888;
   font-weight: 400;
 }
 
 .detail-value {
-  font-family: "Playfair Display", serif;
-  font-size: 16px;
+  font-family: "Segoe UI", serif;
+  font-size: 14px;
   color: #1a1a1a;
   font-weight: 400;
 }
 
 .detail-value.yellow {
-  color: #F6E27B;
+  color: #f6e27b;
   font-style: italic;
 }
 
 /* Game Description Card */
 .game-description-card {
-  margin: 0 20px 15px;
-  padding: 15px 18px;
+  margin: 0 18px 10px;
+  padding: 10px 14px;
   background: #faf9f5;
-  border-radius: 15px;
-  border-left: 3px solid #F6E27B;
+  border-radius: 12px;
+  border-left: 3px solid #f6e27b;
 }
 
 .game-description {
-  font-size: 13px;
+  font-size: 12px;
   color: #555;
-  line-height: 1.6;
+  line-height: 1.5;
   font-style: italic;
-}
-
-/* Bottom Navigation */
-.bottom-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 18px 25px;
-  border-top: 1px solid #f0f0f0;
-  background: white;
-}
-
-.nav-icon {
-  font-size: 22px;
-  cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-}
-
-.nav-icon:hover {
-  opacity: 1;
 }
 
 /* Pulse animation for new results */
@@ -400,4 +379,18 @@ body {
 
 .result-updated {
   animation: resultPulse 0.5s ease-out;
+}
+
+#diceFace {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#diceFace svg {
+  width: 65%;
+  height: 65%;
+  display: block;
 }

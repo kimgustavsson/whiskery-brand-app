@@ -244,8 +244,42 @@ const gameDatabase = [
 let selectedPlayers = 1;
 let selectedDuration = "quick";
 
-// Dice faces
-const diceFaces = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"];
+// Dice faces (SVG)
+const diceFaces = {
+  1: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="9" fill="#B3230B"/>
+      </svg>`,
+  2: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="28" cy="28" r="9" fill="#B3230B"/>
+        <circle cx="72" cy="72" r="9" fill="#B3230B"/>
+      </svg>`,
+  3: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="25" cy="25" r="9" fill="#B3230B"/>
+        <circle cx="50" cy="50" r="9" fill="#B3230B"/>
+        <circle cx="75" cy="75" r="9" fill="#B3230B"/>
+      </svg>`,
+  4: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="28" cy="28" r="9" fill="#B3230B"/>
+        <circle cx="72" cy="28" r="9" fill="#B3230B"/>
+        <circle cx="28" cy="72" r="9" fill="#B3230B"/>
+        <circle cx="72" cy="72" r="9" fill="#B3230B"/>
+      </svg>`,
+  5: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="25" cy="25" r="9" fill="#B3230B"/>
+        <circle cx="75" cy="25" r="9" fill="#B3230B"/>
+        <circle cx="50" cy="50" r="9" fill="#B3230B"/>
+        <circle cx="25" cy="75" r="9" fill="#B3230B"/>
+        <circle cx="75" cy="75" r="9" fill="#B3230B"/>
+      </svg>`,
+  6: `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="25" cy="22" r="9" fill="#B3230B"/>
+        <circle cx="75" cy="22" r="9" fill="#B3230B"/>
+        <circle cx="25" cy="50" r="9" fill="#B3230B"/>
+        <circle cx="75" cy="50" r="9" fill="#B3230B"/>
+        <circle cx="25" cy="78" r="9" fill="#B3230B"/>
+        <circle cx="75" cy="78" r="9" fill="#B3230B"/>
+      </svg>`,
+};
 
 let isRolling = false;
 let lastGameTitle = null; // Avoid repeating same game
@@ -286,7 +320,7 @@ function rollDice() {
   // Animate dice face during roll
   let count = 0;
   const interval = setInterval(() => {
-    diceFace.textContent = diceFaces[Math.floor(Math.random() * 6)];
+    diceFace.innerHTML = diceFaces[Math.floor(Math.random() * 6) + 1];
     count++;
     if (count >= 8) clearInterval(interval);
   }, 80);
@@ -322,8 +356,8 @@ function rollDice() {
     lastGameTitle = game.title;
 
     // Update dice face
-    const finalNum = Math.floor(Math.random() * 6);
-    diceFace.textContent = diceFaces[finalNum];
+    const finalNum = Math.floor(Math.random() * 6) + 1;
+    diceFace.innerHTML = diceFaces[finalNum];
 
     displayGame(game);
 
