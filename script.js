@@ -91,14 +91,24 @@ const gameDatabase = [
       "Run a luxury space cruise line. A stunning 2024 release with gorgeous art deco vibes.",
   },
   {
-    title: "WYRMSPAN",
-    players: [1, 2, 3, 4, 5],
-    duration: "medium",
-    time: "40-70 min",
-    difficulty: "Medium",
-    vibe: "Mythical & rewarding",
+    title: "ARCS",
+    players: [2, 3, 4],
+    duration: "long",
+    time: "90-120 min",
+    difficulty: "Heavy",
+    vibe: "Cutthroat & cinematic",
     description:
-      "Wingspan's dragon sibling. Build a dragon sanctuary in this gorgeous engine builder.",
+      "Cole Wehrle's space opera of betrayal and ambition. Trick-taking meets 4X in a tight 3-act campaign.",
+  },
+  {
+    title: "THE QUEST FOR EL DORADO",
+    players: [2, 3, 4],
+    duration: "quick",
+    time: "30-60 min",
+    difficulty: "Easy",
+    vibe: "Adventurous & quick",
+    description:
+      "Reiner Knizia's deck-building race through the jungle. Easy to learn, hard to win.",
   },
   {
     title: "AZUL",
