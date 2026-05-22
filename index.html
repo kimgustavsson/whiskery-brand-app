@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Whiskery</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="phone-frame">
+      <div class="app">
+        <!-- Status Bar -->
+        <div class="status-bar">
+          <span class="time">9:41</span>
+          <div class="status-icons">
+            <span>📶</span>
+            <span>📶</span>
+            <span>🔋</span>
+          </div>
+        </div>
+
+        <!-- Header -->
+        <header class="header">
+          <div class="header-text">
+            <h1>Roll Your <span class="italic">Whiskery</span></h1>
+            <p class="subtitle">Let the dice decide your next moment.</p>
+          </div>
+          <div class="header-icons">
+            <span class="icon">🔍</span>
+            <span class="icon">⋯</span>
+          </div>
+        </header>
+
+        <!-- Dice Section -->
+        <section class="dice-section">
+          <div class="sticker sticker-tl">🎲</div>
+          <div class="sticker sticker-tr">🎲</div>
+
+          <div class="dice-container" onclick="rollDice()">
+            <div class="dice" id="dice">
+              <span id="diceFace">🎲</span>
+            </div>
+          </div>
+
+          <div class="sticker sticker-bl">☕</div>
+          <div class="sticker sticker-br">🥐</div>
+        </section>
+
+        <!-- Featured Card -->
+        <div class="featured-card">
+          <div class="featured-text">
+            <p class="featured-label">Today's Roll</p>
+            <h3 class="featured-title" id="resultTitle">Tap to Begin</h3>
+          </div>
+          <span class="arrow">→</span>
+        </div>
+
+        <!-- Tagline -->
+        <p class="tagline">
+          The Intersection Of Warmth, Wonder, And Shared Moments.
+        </p>
+
+        <!-- Result Cards -->
+        <div class="results-grid">
+          <div class="result-card">
+            <h4 class="card-title">Your Tea</h4>
+            <p class="card-description" id="teaResult">
+              Roll the dice to discover your perfect tea.
+            </p>
+            <p class="card-meta">
+              From: <span id="teaSource">Jeju Island</span>
+            </p>
+          </div>
+          <div class="result-card">
+            <h4 class="card-title yellow">
+              Your Pastry <span class="badge">popular</span>
+            </h4>
+            <p class="card-description" id="pastryResult">
+              A handcrafted treat awaits.
+            </p>
+            <p class="card-meta">Baked: <span id="pastryTime">Daily</span></p>
+          </div>
+        </div>
+
+        <div class="results-grid">
+          <div class="result-card">
+            <h4 class="card-title yellow">Your Game</h4>
+            <p class="card-description" id="gameResult">
+              Choose your adventure with a roll.
+            </p>
+          </div>
+          <div class="result-card">
+            <h4 class="card-title yellow">Your Vibe</h4>
+            <p class="card-description" id="vibeResult">
+              Each roll unlocks a unique mood.
+            </p>
+          </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+          <span class="nav-icon">🏠</span>
+          <span class="nav-icon">❤️</span>
+          <span class="nav-icon">🛒</span>
+          <span class="nav-icon">🔍</span>
+          <span class="nav-icon">👤</span>
+        </nav>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

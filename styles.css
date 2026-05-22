@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #e5e5e5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Phone Frame */
+.phone-frame {
+  width: 390px;
+  background: white;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.app {
+  padding: 0;
+  position: relative;
+}
+
+/* Status Bar */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status-icons {
+  display: flex;
+  gap: 5px;
+  font-size: 12px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 25px 15px;
+}
+
+.header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #888;
+  margin-top: 5px;
+  font-weight: 300;
+}
+
+.header-icons {
+  display: flex;
+  gap: 12px;
+  font-size: 18px;
+  color: #555;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+/* Dice Section */
+.dice-section {
+  position: relative;
+  height: 280px;
+  background: #f5f5f5;
+  margin: 10px 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.dice-container {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.dice-container:active {
+  transform: scale(0.95);
+}
+
+.dice {
+  width: 140px;
+  height: 140px;
+  background: linear-gradient(135deg, #e8d26a 0%, #d4b948 100%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  box-shadow: 0 15px 35px rgba(212, 185, 72, 0.3);
+  transition: transform 0.5s;
+}
+
+.dice.rolling {
+  animation: rollAnimation 0.8s ease-out;
+}
+
+@keyframes rollAnimation {
+  0% {
+    transform: rotateY(0) rotateX(0);
+  }
+  50% {
+    transform: rotateY(360deg) rotateX(180deg);
+  }
+  100% {
+    transform: rotateY(720deg) rotateX(360deg);
+  }
+}
+
+/* Stickers */
+.sticker {
+  position: absolute;
+  font-size: 40px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.sticker-tl {
+  top: 20px;
+  left: 30px;
+  transform: rotate(-15deg);
+}
+
+.sticker-tr {
+  top: 25px;
+  right: 35px;
+  transform: rotate(20deg);
+}
+
+.sticker-bl {
+  bottom: 30px;
+  left: 40px;
+  font-size: 36px;
+  transform: rotate(-10deg);
+}
+
+.sticker-br {
+  bottom: 35px;
+  right: 30px;
+  font-size: 36px;
+  transform: rotate(15deg);
+}
+
+/* Featured Card */
+.featured-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  margin: 20px;
+  padding: 18px 20px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.featured-label {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.featured-title {
+  font-size: 17px;
+  font-weight: 600;
+  color: #d4b948;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.arrow {
+  font-size: 20px;
+  color: #555;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 15px;
+  color: #333;
+  padding: 5px 25px 15px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Results Grid */
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 0 25px 15px;
+}
+
+.result-card {
+  padding: 5px 0;
+}
+
+.card-title {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-title.yellow {
+  color: #d4b948;
+}
+
+.badge {
+  background: #ffe082;
+  color: #5d4e20;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+}
+
+.card-description {
+  font-size: 12px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 6px;
+  border-top: 1px solid #e8e8e8;
+  padding-top: 8px;
+}
+
+.card-meta {
+  font-size: 11px;
+  color: #999;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 18px 25px;
+  border-top: 1px solid #f0f0f0;
+  background: white;
+  margin-top: 10px;
+}
+
+.nav-icon {
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.nav-icon:hover {
+  opacity: 1;
+}
